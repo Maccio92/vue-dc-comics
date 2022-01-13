@@ -78,12 +78,14 @@ export default {
     width: 100%;
     height: 300px;
     background-image: url('../assets/img/footer-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
     display: flex;
     align-items: center;
     position: relative;
     z-index: 1;
     .thumb-bg{
-        width: 30%;
+        width: 400px;
         position: absolute;
         top: -50px;
         right: 150px;
@@ -121,7 +123,7 @@ export default {
                 }   
         }
         img{
-            width: 10%;
+            height: 20%;
         }
     }
 }
