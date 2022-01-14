@@ -11,3 +11,30 @@ html{
     width: 80%;
     margin: 0 auto;
 }
+.flex{
+    display: flex;
+    align-items: center;
+}
+h1{
+    color: white;
+    font-size: 1em;
+}
+h2{
+    color: white;
+    font-size: 1em;
+    text-align: center;
+    font-weight: 300;
+}  
+h3{
+    color: white;
+    font-size: 1em;
+}
+h4{
+    color: white;
+    font-size: 0.8em;
+    margin: 8px 0;
+}
+.caption{
+    font-size: 0.8em;
+    color: white;
+    } 

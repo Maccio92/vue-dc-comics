@@ -1,7 +1,7 @@
 <template>
 <div>
-    <div class="upper-footer">
-        <div class="container">
+    <div class="upper-footer flex">
+        <div class="container flex">
             <div class="col">
                 <h3>DC COMICS</h3>
                 <ul>
@@ -48,11 +48,11 @@
         </div>
     </div>
     <div class="lower-footer">
-        <div class="container-low">
+        <div class="container container-low flex">
             <div class="left-col">
                 <button>SIGN-UP NOW</button>
             </div>
-            <div class="right-col">
+            <div class="right-col flex">
                 <h2>FOLLOW US</h2>
                 <img src="../assets/img/footer-facebook.png" alt="">
                 <img src="../assets/img/footer-twitter.png" alt="">
@@ -80,7 +80,6 @@ export default {
     background-image: url('../assets/img/footer-bg.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    display: flex;
     align-items: center;
     position: relative;
     z-index: 1;
@@ -99,12 +98,8 @@ export default {
     position: relative;
     z-index: 1;
     .container-low{
-        width: 80%;
         height: 100%;
-        margin: 0 auto;
-        display: flex;
         justify-content: space-between;
-        align-items: center;
         .left-col{
             button{
                 border: solid 2px #0282f9;
@@ -114,13 +109,7 @@ export default {
             }
         }
         .right-col{
-            display: flex;
-            align-items: center;
-            gap: 15px;
-                h2{
-                    color: #0282f9;
-                    font-size: 1em;
-                }   
+            gap: 15px;     
         }
         img{
             height: 20%;
@@ -128,15 +117,9 @@ export default {
     }
 }
 .container{
-    display: flex;
     justify-content: start;
     .col{
         width: 15%;
-        h3{
-            color: white;
-            font-size: 0.8em;
-            margin: 8px 0;
-        }
         ul{
             list-style: none;
             li{

@@ -4,7 +4,7 @@
         <div class="jumbotron">
             <button class="current">CURRENT SERIES</button>
         </div>
-        <div class="container flex">
+        <div class="container flex flex-wrap">
             <Product 
             v-for="(product, index) in products" :key="index"
             :thumbProduct="product.thumb"
@@ -15,7 +15,7 @@
         </div>
     </div>
     <div class="second-container">
-        <div class="container">
+        <div class="container flex">
             <Features 
             v-for="(feature, index) in features" :key="index"
             :iconFeature="feature.icon"
@@ -158,14 +158,8 @@ export default {
     background-size: cover;   
     position: relative;
 }
-h1{
-    color: white;
-    font-size: 1em;
-}
 .container{
-    display: flex;
     justify-content: center;
-    align-items: center;
     height: 100%;
 }
 .second-container{
@@ -173,8 +167,7 @@ h1{
     height: 150px;
     background-color: #0282f9;
 }
-.flex{
-    display: flex;
+.flex-wrap{
     flex-wrap: wrap;
     padding: 50px 0;
 }

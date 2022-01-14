@@ -1,5 +1,5 @@
 <template>
-<div class="product">
+<div class="product flex">
     <img class="thumb" :src="iconFeature" :alt="altFeature">
     <p class="caption">{{captionFeature}}</p>
 </div>
@@ -15,18 +15,12 @@ export default {
 <style lang="scss" scoped>
 
 .product{
-    display: flex;
     justify-content: center;
     width: calc(100% / 5);
-    align-items: center;
     gap: 10px;
     z-index: 2;
     .thumb{
     width: 20%;
     }
-    .caption{
-    font-size: 0.8em;
-    color: white;
-    } 
 }
 </style>
