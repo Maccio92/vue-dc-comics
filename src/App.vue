@@ -3,6 +3,7 @@
     <Header />
     <Main />
     <Footer />
+    <Product />
   </div>
 </template>
 
@@ -10,6 +11,7 @@
 import Header from './components/Header.vue';
 import Main from './components/Main.vue';
 import Footer from './components/Footer.vue';
+import Product from './components/Product.vue';
 
 export default {
   name: "App",
@@ -17,6 +19,7 @@ export default {
     Header,
     Main,
     Footer,
+    Product,
   },
 };
 </script>
