@@ -16,26 +16,12 @@
     </div>
     <div class="second-container">
         <div class="container">
-            <div class="product">
-                <img class="thumb" src="../assets/img/buy-comics-digital-comics.png" alt="">
-                <p class="caption">DIGITAL COMICS</p>
-            </div>
-            <div class="product">
-                <img class="thumb" src="../assets/img/buy-comics-merchandise.png" alt="">
-                <p class="caption">DC MERCHANDISE</p>
-            </div>
-            <div class="product">
-                <img class="thumb" src="../assets/img/buy-comics-subscriptions.png" alt="">
-                <p class="caption">SUBSCRIPTIONS</p>
-            </div>
-            <div class="product">
-                <img class="thumb" src="../assets/img/buy-comics-shop-locator.png" alt="">
-                <p class="caption">DC SHOP LOCATOR</p>
-            </div>
-            <div class="product">
-                <img class="thumb" src="../assets/img/buy-dc-power-visa.svg" alt="">
-                <p class="caption">DC POWER VISA</p>
-            </div>
+            <Features 
+            v-for="(feature, index) in features" :key="index"
+            :iconFeature="feature.icon"
+            :altFeature="feature.alt" 
+            :captionFeature="feature.caption"
+            />
         </div>
     </div>
 </div>
@@ -43,14 +29,17 @@
 
 <script>
 import Product from "./Product.vue"
+import Features from "./Features.vue"
+
 export default {
     name: 'Main',
     components: {
         Product,
+        Features,
     },
     data(){
         return{
-            counter: 0,
+            // counter: 0,
         products: [
         {
             thumb: "https://www.dccomics.com/sites/default/files/styles/covers192x291/public/comic-covers/2018/09/AC1000_DLX_162-001_HD_5ba13723281ab0.37845353.jpg?itok=ZsI-C5eX",
@@ -124,6 +113,34 @@ export default {
             series: "Catwoman",
             type: "graphic novel"
         }
+        ],
+            // newCounter: 0,
+        features: [
+            {
+                icon: require("../assets/img/buy-comics-digital-comics.png"),
+                caption:"DIGITAL COMICS",
+                alt:"buy-comics-digital-comics",
+            },
+            {
+                icon: require("../assets/img/buy-comics-merchandise.png"),
+                caption:"DC MERCHANDISE",
+                alt:"buy-comics-merchandise",
+            },
+            {
+                icon: require("../assets/img/buy-comics-subscriptions.png"),
+                caption:"SUBSCRIPTIONS",
+                alt:"buy-comics-subscriptions",
+            },
+            {
+                icon: require("../assets/img/buy-comics-shop-locator.png"),
+                caption:"DC SHOP LOCATOR",
+                alt:"buy-comics-shop-locator",
+            },
+            {
+                icon: require("../assets/img/buy-dc-power-visa.svg"),
+                caption:"DC POWER VISA",
+                alt:"buy-comics-digital-comics",
+            },
         ]
         }
     }
@@ -156,20 +173,6 @@ h1{
     height: 150px;
     background-color: #0282f9;
 }
-.product{
-    display: flex;
-    justify-content: center;
-    width: calc(100% / 5);
-    align-items: center;
-    gap: 10px;
-    .thumb{
-    width: 20%;
-    }
-    .caption{
-        font-size: 0.8em;
-        color: white;
-    }   
-}
 .flex{
     display: flex;
     flex-wrap: wrap;
@@ -191,4 +194,5 @@ h1{
     padding: 15px;
     text-align: center;
 }
+
 </style>

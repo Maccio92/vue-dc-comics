@@ -28,7 +28,7 @@ export default {
         
     
         img{
-        height: 250px; 
+            height: 250px; 
         }
     }
         h2{
