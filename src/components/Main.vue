@@ -1,6 +1,9 @@
 <template>
 <div>
     <div class="main-container">
+        <div class="jumbotron">
+            <button class="current">CURRENT SERIES</button>
+        </div>
         <div class="container flex">
             <Product 
             v-for="(product, index) in products" :key="index"
@@ -8,6 +11,7 @@
             :alt="product.series" 
             :seriesProduct="product.series"
             />
+            <button class="load">LOAD MORE</button>
         </div>
     </div>
     <div class="second-container">
@@ -129,8 +133,13 @@ export default {
 <style lang="scss" scoped>
 .main-container{
     width: 100%;
-    // height: 100px;
     background-color: #1c1c1c;
+}
+.jumbotron{
+    height: 400px;
+    background-image: url("../assets/img/jumbotron.jpg");
+    background-size: cover;   
+    position: relative;
 }
 h1{
     color: white;
@@ -166,5 +175,20 @@ h1{
     flex-wrap: wrap;
     padding: 50px 0;
 }
-
+.current{
+    background-color: #0282f9;
+    color: white;
+    border: 0;
+    padding: 15px;
+    position: absolute;
+    bottom: -20px;
+    left: 200px;
+}
+.load{
+    background-color: #0282f9;
+    color: white;
+    border: 0;
+    padding: 15px;
+    text-align: center;
+}
 </style>
