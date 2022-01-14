@@ -1,11 +1,12 @@
 <template>
 <div>
     <div class="main-container">
-        <div class="container">
+        <div class="container flex">
             <Product 
             v-for="(product, index) in products" :key="index"
             :thumbProduct="product.thumb"
-            :alt="product.series" :
+            :alt="product.series" 
+            :seriesProduct="product.series"
             />
         </div>
     </div>
@@ -128,7 +129,7 @@ export default {
 <style lang="scss" scoped>
 .main-container{
     width: 100%;
-    height: 100px;
+    // height: 100px;
     background-color: #1c1c1c;
 }
 h1{
@@ -159,6 +160,11 @@ h1{
         font-size: 0.8em;
         color: white;
     }   
+}
+.flex{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 50px 0;
 }
 
 </style>
